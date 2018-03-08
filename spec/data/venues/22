@@ -1,0 +1,8 @@
+{
+  "copyright" : "Copyright 2018 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "venues" : [ {
+    "id" : 22,
+    "name" : "Dodger Stadium",
+    "link" : "/api/v1/venues/22"
+  } ]
+}

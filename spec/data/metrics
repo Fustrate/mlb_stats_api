@@ -1,0 +1,87 @@
+[ {
+  "name" : "",
+  "metricId" : 0
+}, {
+  "group" : "pitching",
+  "name" : "releaseSpinRate",
+  "unit" : "RPM",
+  "metricId" : 1000
+}, {
+  "group" : "pitching",
+  "name" : "releaseExtension",
+  "unit" : "FT",
+  "metricId" : 1001
+}, {
+  "group" : "pitching",
+  "name" : "releaseSpeed",
+  "unit" : "MPH",
+  "metricId" : 1002
+}, {
+  "group" : "pitching",
+  "name" : "effectiveSpeed",
+  "unit" : "MPH",
+  "metricId" : 1028
+}, {
+  "group" : "hitting, pitching",
+  "name" : "launchSpeed",
+  "unit" : "MPH",
+  "metricId" : 1003
+}, {
+  "group" : "hitting, pitching",
+  "name" : "launchAngle",
+  "unit" : "DEG",
+  "metricId" : 1005
+}, {
+  "group" : "hitting, pitching",
+  "name" : "generatedSpeed",
+  "unit" : "MPH",
+  "metricId" : 1044
+}, {
+  "group" : "hitting",
+  "name" : "maxHeight",
+  "unit" : "FT",
+  "metricId" : 1039
+}, {
+  "group" : "hitting",
+  "name" : "travelTime",
+  "unit" : "SEC",
+  "metricId" : 1049
+}, {
+  "group" : "hitting, running",
+  "name" : "hangTime",
+  "unit" : "SEC",
+  "metricId" : 1027
+}, {
+  "name" : "opportunityTimeGround",
+  "metricId" : 1091
+}, {
+  "group" : "hitting",
+  "name" : "distance",
+  "unit" : "FT",
+  "metricId" : 1030
+}, {
+  "group" : "hitting",
+  "name" : "travelDistance",
+  "unit" : "FT",
+  "metricId" : 1050
+}, {
+  "group" : "hitting",
+  "name" : "hrDistance",
+  "unit" : "FT",
+  "metricId" : 0
+}, {
+  "group" : "hitting",
+  "name" : "hitTrajectory",
+  "unit" : "String",
+  "metricId" : 1033
+}, {
+  "group" : "hitting",
+  "name" : "launchSpinRate",
+  "unit" : "RPM",
+  "metricId" : 1063
+}, {
+  "group" : "hitting",
+  "name" : "barreledBall",
+  "unit" : "String",
+  "metricId" : 1076
+} ]

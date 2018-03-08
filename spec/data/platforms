@@ -1,0 +1,37 @@
+[ {
+  "platformCode" : "web",
+  "platformDescription" : "Web"
+}, {
+  "platformCode" : "android-phone",
+  "platformDescription" : "Android Phone"
+}, {
+  "platformCode" : "android-tablet",
+  "platformDescription" : "Android Tablet"
+}, {
+  "platformCode" : "ios-phone",
+  "platformDescription" : "iOS Phone"
+}, {
+  "platformCode" : "ios-tablet",
+  "platformDescription" : "iOS Tablet"
+}, {
+  "platformCode" : "xbox-one",
+  "platformDescription" : "Xbox One"
+}, {
+  "platformCode" : "xbox-360",
+  "platformDescription" : "Xbox 360"
+}, {
+  "platformCode" : "roku",
+  "platformDescription" : "Roku"
+}, {
+  "platformCode" : "playstation",
+  "platformDescription" : "PlayStation"
+}, {
+  "platformCode" : "chromecast",
+  "platformDescription" : "Chromecast"
+}, {
+  "platformCode" : "atv",
+  "platformDescription" : "Apple TV"
+}, {
+  "platformCode" : "tvos",
+  "platformDescription" : "tvOS"
+} ]

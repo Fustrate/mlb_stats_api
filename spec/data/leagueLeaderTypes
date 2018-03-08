@@ -1,0 +1,239 @@
+[ {
+  "displayName" : "homeRuns",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "sacrificeBunts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "sacrificeFlies",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "runs",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "groundoutToFlyoutRatio",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "stolenBases",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "battingAverage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "groundOuts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "numberOfPitches",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "onBasePercentage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "caughtStealing",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "groundIntoDoublePlays",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "totalBases",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "earnedRunAverage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "fieldingPercentage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "walksAndHitsPerInningPitched",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "flyouts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "hitByPitches",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "gamesPlayed",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "walks",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "sluggingPercentage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "onBasePlusSlugging",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "runsBattedIn",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "triples",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "extraBaseHits",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "hits",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "atBats",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "strikeouts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "doubles",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "totalPlateAppearances",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "intentionalWalks",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "wins",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "losses",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "saves",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+} ]

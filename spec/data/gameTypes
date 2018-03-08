@@ -1,0 +1,37 @@
+[ {
+  "id" : "S",
+  "description" : "Spring Training"
+}, {
+  "id" : "R",
+  "description" : "Regular season"
+}, {
+  "id" : "F",
+  "description" : "Wild Card Game"
+}, {
+  "id" : "D",
+  "description" : "Division Series"
+}, {
+  "id" : "L",
+  "description" : "League Championship Series"
+}, {
+  "id" : "W",
+  "description" : "World Series"
+}, {
+  "id" : "C",
+  "description" : "Championship"
+}, {
+  "id" : "N",
+  "description" : "Nineteenth Century Series"
+}, {
+  "id" : "P",
+  "description" : "Playoffs"
+}, {
+  "id" : "A",
+  "description" : "All-Star game"
+}, {
+  "id" : "I",
+  "description" : "Intrasquad"
+}, {
+  "id" : "E",
+  "description" : "Exhibition"
+} ]

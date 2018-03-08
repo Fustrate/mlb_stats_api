@@ -1,0 +1,271 @@
+[ {
+  "shortName" : "Pitcher",
+  "fullName" : "Pitcher",
+  "abbrev" : "P",
+  "code" : "1",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Pitcher"
+}, {
+  "shortName" : "Catcher",
+  "fullName" : "Catcher",
+  "abbrev" : "C",
+  "code" : "2",
+  "type" : "Catcher",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "Catcher"
+}, {
+  "shortName" : "1st Base",
+  "fullName" : "1st Base",
+  "abbrev" : "1B",
+  "code" : "3",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "1st Base"
+}, {
+  "shortName" : "2nd Base",
+  "fullName" : "2nd Base",
+  "abbrev" : "2B",
+  "code" : "4",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "2nd Base"
+}, {
+  "shortName" : "3rd Base",
+  "fullName" : "3rd Base",
+  "abbrev" : "3B",
+  "code" : "5",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "3rd Base"
+}, {
+  "shortName" : "Shortstop",
+  "fullName" : "Shortstop",
+  "abbrev" : "SS",
+  "code" : "6",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "Shortstop"
+}, {
+  "shortName" : "Left Field",
+  "fullName" : "Left Field",
+  "abbrev" : "LF",
+  "code" : "7",
+  "type" : "Outfielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : true,
+  "displayName" : "Left Field"
+}, {
+  "shortName" : "Center Field",
+  "fullName" : "Center Field",
+  "abbrev" : "CF",
+  "code" : "8",
+  "type" : "Outfielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : true,
+  "displayName" : "Center Field"
+}, {
+  "shortName" : "Right Field",
+  "fullName" : "Right Field",
+  "abbrev" : "RF",
+  "code" : "9",
+  "type" : "Outfielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : true,
+  "displayName" : "Right Field"
+}, {
+  "shortName" : "Designated Hitter",
+  "fullName" : "Designated Hitter",
+  "abbrev" : "DH",
+  "code" : "10",
+  "type" : "Hitter",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Designated Hitter"
+}, {
+  "shortName" : "Pinch Hitter",
+  "fullName" : "Pinch Hitter",
+  "abbrev" : "PH",
+  "code" : "11",
+  "type" : "Hitter",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Pinch Hitter"
+}, {
+  "shortName" : "Pinch Runner",
+  "fullName" : "Pinch Runner",
+  "abbrev" : "PR",
+  "code" : "12",
+  "type" : "Runner",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Pinch Runner"
+}, {
+  "shortName" : "Base Runner",
+  "fullName" : "Base Runner",
+  "abbrev" : "BR",
+  "code" : "BR",
+  "type" : "Runner",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Base Runner"
+}, {
+  "shortName" : "Outfield",
+  "fullName" : "Outfield",
+  "abbrev" : "OF",
+  "code" : "O",
+  "type" : "Outfielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : true,
+  "displayName" : "Outfield"
+}, {
+  "shortName" : "Infield",
+  "fullName" : "Infield",
+  "abbrev" : "IF",
+  "code" : "I",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "Infield"
+}, {
+  "shortName" : "Starting Pitcher",
+  "fullName" : "Starting Pitcher",
+  "abbrev" : "SP",
+  "code" : "S",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Starting Pitcher"
+}, {
+  "shortName" : "Relief Pitcher",
+  "fullName" : "Relief Pitcher",
+  "abbrev" : "RP",
+  "code" : "E",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Relief Pitcher"
+}, {
+  "shortName" : "Closer",
+  "fullName" : "Closer",
+  "abbrev" : "CP",
+  "code" : "C",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Closer"
+}, {
+  "shortName" : "Utility",
+  "fullName" : "Utility",
+  "abbrev" : "UT",
+  "code" : "U",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "Utility"
+}, {
+  "shortName" : "Utility Infielder",
+  "fullName" : "Utility Infielder",
+  "abbrev" : "UI",
+  "code" : "V",
+  "type" : "Infielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : false,
+  "displayName" : "Utility Infielder"
+}, {
+  "shortName" : "Utility Outfielder",
+  "fullName" : "Utility Outfielder",
+  "abbrev" : "UO",
+  "code" : "W",
+  "type" : "Outfielder",
+  "pitcher" : false,
+  "fielder" : true,
+  "outfield" : true,
+  "displayName" : "Utility Outfielder"
+}, {
+  "shortName" : "Right-Handed Pitcher",
+  "fullName" : "Right-Handed Pitcher",
+  "abbrev" : "RHP",
+  "code" : "K",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Right-Handed Pitcher"
+}, {
+  "shortName" : "Left-Handed Pitcher",
+  "fullName" : "Left-Handed Pitcher",
+  "abbrev" : "LHP",
+  "code" : "L",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Left-Handed Pitcher"
+}, {
+  "shortName" : "Right-Handed Starter",
+  "fullName" : "Right-Handed Starter",
+  "abbrev" : "RHS",
+  "code" : "M",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Right-Handed Starter"
+}, {
+  "shortName" : "Left-Handed Starter",
+  "fullName" : "Left-Handed Starter",
+  "abbrev" : "LHS",
+  "code" : "N",
+  "type" : "Pitcher",
+  "pitcher" : true,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Left-Handed Starter"
+}, {
+  "shortName" : "Batter",
+  "fullName" : "Batter",
+  "abbrev" : "B",
+  "code" : "10",
+  "type" : "Batter",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Batter"
+}, {
+  "shortName" : "Unknown",
+  "fullName" : "Unknown",
+  "abbrev" : "X",
+  "code" : "X",
+  "type" : "Unknown",
+  "pitcher" : false,
+  "fielder" : false,
+  "outfield" : false,
+  "displayName" : "Unknown"
+} ]

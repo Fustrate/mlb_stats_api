@@ -1,0 +1,47 @@
+[ {
+  "displayName" : "pecota"
+}, {
+  "displayName" : "pecotaRos"
+}, {
+  "displayName" : "yearByYear"
+}, {
+  "displayName" : "yearByYearAdvanced"
+}, {
+  "displayName" : "season"
+}, {
+  "displayName" : "seasonAdvanced"
+}, {
+  "displayName" : "career"
+}, {
+  "displayName" : "gameLog"
+}, {
+  "displayName" : "playLog"
+}, {
+  "displayName" : "pitchLog"
+}, {
+  "displayName" : "metricLog"
+}, {
+  "displayName" : "metricAverages"
+}, {
+  "displayName" : "pitchArsenal"
+}, {
+  "displayName" : "vsTeam"
+}, {
+  "displayName" : "vsTeam5Y"
+}, {
+  "displayName" : "byDateRange"
+}, {
+  "displayName" : "byMonth"
+}, {
+  "displayName" : "byDayOfWeek"
+}, {
+  "displayName" : "rankings"
+}, {
+  "displayName" : "rankingsByYear"
+}, {
+  "displayName" : "hotColdZones"
+}, {
+  "displayName" : "availableStats"
+}, {
+  "displayName" : "statSplits"
+} ]
