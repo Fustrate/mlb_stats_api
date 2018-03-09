@@ -7,6 +7,10 @@ require 'json'
 require 'mlb_stats_api/errors'
 require 'mlb_stats_api/version'
 
+require 'mlb_stats_api/base'
+require 'mlb_stats_api/live_feed'
+require 'mlb_stats_api/venue'
+
 require 'mlb_stats_api/conferences'
 require 'mlb_stats_api/config'
 require 'mlb_stats_api/divisions'
