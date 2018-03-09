@@ -32,7 +32,13 @@ module MLBStatsAPI
     def get(endpoint, query = {})
       version = query.delete(:version) || DEFAULT_VERSION
 
-      response = self.class.get("/api/v#{version}#{endpoint}", query: query)
+      query.reject! { |_, v| v.nil? }
+
+      response = if query.any?
+                   self.class.get("/api/v#{version}#{endpoint}", query: query)
+                 else
+                   self.class.get("/api/v#{version}#{endpoint}")
+                 end
 
       raise_exception(response) unless response.code == 200
 
