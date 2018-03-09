@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     mlb_stats_api (0.1.0)
+      hana (~> 1.3)
       httparty (~> 0.16)
 
 GEM
@@ -12,6 +13,7 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
+    hana (1.3.4)
     hashdiff (0.3.7)
     httparty (0.16.0)
       multi_xml (>= 0.5.2)
