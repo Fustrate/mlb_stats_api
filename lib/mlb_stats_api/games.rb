@@ -17,7 +17,10 @@ module MLBStatsAPI
     # This endpoint can return very large payloads. It is STRONGLY recommended
     # that clients ask for diffs and use "Accept-Encoding: gzip" header.
     def live_feed(game_id, timecode: nil)
-      get("/games/#{game_id}/feed/live", version: '1.1', timecode: timecode)
+      MLBStatsAPI::LiveFeed.new(
+        self,
+        get("/games/#{game_id}/feed/live", version: '1.1', timecode: timecode)
+      )
     end
 
     def live_feed_diff(game_id, timecode: nil, snapshot_at: nil)
@@ -32,6 +35,10 @@ module MLBStatsAPI
       end
 
       get("/games/#{game_id}/feed/live/diffPatch", query)
+    end
+
+    def live_feed_timestamps(game_id)
+      get("/games/#{game_id}/feed/live/timestamps", version: '1.1')
     end
 
     def linescore(game_id)
