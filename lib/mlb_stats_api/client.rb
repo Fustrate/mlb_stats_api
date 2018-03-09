@@ -4,20 +4,20 @@ module MLBStatsAPI
   class Client
     include HTTParty
 
-    # include MLBStatsAPI::Conferences
+    include MLBStatsAPI::Conferences
     include MLBStatsAPI::Config
-    # include MLBStatsAPI::Divisions
-    # include MLBStatsAPI::Drafts
+    include MLBStatsAPI::Divisions
+    include MLBStatsAPI::Drafts
     include MLBStatsAPI::Games
-    # include MLBStatsAPI::HomeRunDerby
-    # include MLBStatsAPI::Leagues
+    include MLBStatsAPI::HomeRunDerby
+    include MLBStatsAPI::Leagues
     include MLBStatsAPI::People
-    # include MLBStatsAPI::Schedules
-    # include MLBStatsAPI::Seasons
-    # include MLBStatsAPI::Sports
-    # include MLBStatsAPI::Standings
-    # include MLBStatsAPI::Stats
-    # include MLBStatsAPI::Teams
+    include MLBStatsAPI::Schedules
+    include MLBStatsAPI::Seasons
+    include MLBStatsAPI::Sports
+    include MLBStatsAPI::Standings
+    include MLBStatsAPI::Stats
+    include MLBStatsAPI::Teams
     include MLBStatsAPI::Venues
 
     DEFAULT_VERSION = '1'
