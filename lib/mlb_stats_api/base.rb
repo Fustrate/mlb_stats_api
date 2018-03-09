@@ -11,5 +11,9 @@ module MLBStatsAPI
     def [](key)
       @data[key]
     end
+
+    def dig(*path)
+      @data.dig(*path)
+    end
   end
 end

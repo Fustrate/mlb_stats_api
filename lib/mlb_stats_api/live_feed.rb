@@ -12,6 +12,26 @@ module MLBStatsAPI
       @id = data['gameData']['game']['pk']
     end
 
+    def boxscore
+      @data['liveData']['boxscore']
+    end
+
+    def decisions
+      @data['liveData']['decisions']
+    end
+
+    def leaders
+      @data['liveData']['leaders']
+    end
+
+    def linescore
+      @data['liveData']['linescore']
+    end
+
+    def plays
+      @data['liveData']['plays']
+    end
+
     def timestamps
       @api.live_feed_timestamps(@id)
     end
