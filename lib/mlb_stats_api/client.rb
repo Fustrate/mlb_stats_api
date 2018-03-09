@@ -22,9 +22,12 @@ module MLBStatsAPI
 
     DEFAULT_VERSION = '1'
 
-    headers 'Content-Type' => 'application/json', 'Accept-Encoding' => 'gzip'
+    headers 'Content-Type' => 'application/json'
+    # , 'Accept-Encoding' => 'gzip, deflate'
 
     base_uri 'http://statsapi-default-elb-prod-876255662.us-east-1.elb.amazonaws.com'
+
+    format :json
 
     def get(endpoint, query = {})
       version = query.delete(:version) || DEFAULT_VERSION
