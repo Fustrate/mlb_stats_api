@@ -38,6 +38,8 @@ module MLBStatsAPI
 
     def reload!
       @data = @api.get("/game/#{@id}/feed/live", version: '1.1')
+
+      true
     end
 
     def update!
@@ -52,6 +54,8 @@ module MLBStatsAPI
 
       # If the diff is too large or too old, a new feed is returned
       @data = diffs if diffs.is_a?(Hash)
+
+      true
     end
 
     def process_diffs(diffs)
@@ -60,6 +64,8 @@ module MLBStatsAPI
       end
 
       @api.logger&.info 'Successfully processed live feed diff'
+
+      true
     rescue Hana::Patch::Exception
       @api.logger&.info 'Failed to process live feed diff; nuking'
 
@@ -67,6 +73,8 @@ module MLBStatsAPI
       @data = nil
 
       reload!
+
+      false
     end
   end
 end
