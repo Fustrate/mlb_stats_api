@@ -48,18 +48,21 @@ module MLBStatsAPI
         timecode: @data['metaData']['timeStamp']
       )
 
-      begin
-        diffs.each do |diff_set|
-          patch = Hana::Patch.new diff_set['diff']
+      return process_diffs(diffs) if diffs.is_a(Array)
 
-          @data = patch.apply(@data)
-        end
-      rescue Hana::Patch::Exception
-        # Nuke it!
-        @data = nil
+      # If the diff is too large or too old, a new feed is returned
+      @data = diffs if diffs.is_a?(Hash)
+    end
 
-        reload!
+    def process_diffs(diffs)
+      diffs.each do |diff_set|
+        Hana::Patch.new(diff_set['diff']).apply(@data)
       end
+    rescue Hana::Patch::Exception
+      # Nuke it!
+      @data = nil
+
+      reload!
     end
   end
 end
