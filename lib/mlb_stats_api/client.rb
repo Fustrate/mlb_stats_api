@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'logger'
+
 module MLBStatsAPI
   class Client
     include HTTParty
@@ -29,15 +31,23 @@ module MLBStatsAPI
 
     format :json
 
+    attr_accessor :logger
+
+    def initialize(logger: nil)
+      @logger = logger || ::Logger.new(STDOUT)
+    end
+
     def get(endpoint, query = {})
-      version = query.delete(:version) || DEFAULT_VERSION
+      url = "/api/v#{query.delete(:version) || DEFAULT_VERSION}#{endpoint}"
 
       query.reject! { |_, v| v.nil? }
 
+      @logger&.info("Fetching URL: #{url} Query: #{query.inspect}")
+
       response = if query.any?
-                   self.class.get("/api/v#{version}#{endpoint}", query: query)
+                   self.class.get(url, query: query)
                  else
-                   self.class.get("/api/v#{version}#{endpoint}")
+                   self.class.get(url)
                  end
 
       raise_exception(response) unless response.code == 200

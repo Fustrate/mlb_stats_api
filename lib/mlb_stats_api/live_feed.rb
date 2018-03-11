@@ -58,7 +58,11 @@ module MLBStatsAPI
       diffs.each do |diff_set|
         Hana::Patch.new(diff_set['diff']).apply(@data)
       end
+
+      @api.logger&.info 'Successfully processed live feed diff'
     rescue Hana::Patch::Exception
+      @api.logger&.info 'Failed to process live feed diff; nuking'
+
       # Nuke it!
       @data = nil
 
