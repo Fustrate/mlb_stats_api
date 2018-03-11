@@ -33,8 +33,10 @@ module MLBStatsAPI
 
     attr_accessor :logger
 
-    def initialize(logger: nil)
-      @logger = logger || ::Logger.new(STDOUT)
+    def initialize(logger: false)
+      return if logger == false
+
+      @logger = logger.is_a?(::Logger) ? logger : ::Logger.new(logger)
     end
 
     def get(endpoint, query = {})
