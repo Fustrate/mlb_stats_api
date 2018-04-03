@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'hana', '~> 1.3'
   spec.add_dependency 'httparty', '~> 0.16'
+  spec.add_dependency 'moneta', '~> 1.0'
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'logger'
+require 'moneta'
 
 module MLBStatsAPI
   class Client
@@ -31,9 +32,15 @@ module MLBStatsAPI
 
     format :json
 
-    attr_accessor :logger
+    attr_accessor :logger, :cache
 
-    def initialize(logger: false)
+    def initialize(logger: false, cache: nil)
+      @cache = if cache
+                 Moneta.new(cache.class.to_s.to_sym, backend: cache)
+               else
+                 Moneta.new(:Null)
+               end
+
       return if logger == false
 
       @logger = logger.is_a?(::Logger) ? logger : ::Logger.new(logger)
