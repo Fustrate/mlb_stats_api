@@ -64,6 +64,18 @@ module MLBStatsAPI
       response.parsed_response
     end
 
+    def fetch(key)
+      value = @cache.load key
+
+      return value if value
+
+      value = yield
+
+      @cache.store key, value
+
+      value
+    end
+
     protected
 
     def raise_exception(response)

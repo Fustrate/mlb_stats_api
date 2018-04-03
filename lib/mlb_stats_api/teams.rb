@@ -3,7 +3,7 @@
 module MLBStatsAPI
   module Teams
     def team(team_id)
-      @cache.fetch("mlb_stats_api:teams:#{team_id}") do
+      fetch("mlb_stats_api:teams:#{team_id}") do
         get("/teams/#{team_id}").dig('teams', 0)
       end
     end

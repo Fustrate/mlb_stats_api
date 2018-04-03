@@ -3,7 +3,7 @@
 module MLBStatsAPI
   module Venues
     def venue(venue_id)
-      MLBStatsAPI::Venue.new get("/venues/#{venue_id}")['venues'].first
+      MLBStatsAPI::Venue.new get("/venues/#{venue_id}").dig('venues', 0)
     end
   end
 end
