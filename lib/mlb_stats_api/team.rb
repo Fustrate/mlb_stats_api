@@ -17,6 +17,7 @@ module MLBStatsAPI
     def abbreviation
       @data['abbreviation']
     end
+    alias code abbreviation
 
     def file_code
       @data['fileCode']
@@ -34,9 +35,13 @@ module MLBStatsAPI
       @data.dig('division', 'id')
     end
 
+    def full_name
+      "#{location} #{name}"
+    end
+
     # So we don't get huge printouts
     def inspect
-      %(#<MLBGameday::Team @name="#{@name}">)
+      %(#<MLBGameday::Team @name="#{name}">)
     end
   end
 end
