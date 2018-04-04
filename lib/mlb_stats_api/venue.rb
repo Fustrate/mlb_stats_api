@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
-  class Venue
-    attr_reader :id, :name
+  class Venue < Base
+    def id
+      @data['id']
+    end
 
-    def initialize(data)
-      @data = data
-
-      @id = data['id']
-      @name = data['name']
+    def name
+      @data['name']
     end
   end
 end

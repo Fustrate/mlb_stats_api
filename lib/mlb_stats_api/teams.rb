@@ -3,9 +3,11 @@
 module MLBStatsAPI
   module Teams
     def team(team_id)
-      fetch("mlb_stats_api:teams:#{team_id}") do
+      data = fetch("mlb_stats_api:teams:#{team_id}") do
         get("/teams/#{team_id}").dig('teams', 0)
       end
+
+      MLBStatsAPI::Team.new data
     end
 
     def teams(*team_ids)
@@ -16,7 +18,7 @@ module MLBStatsAPI
         value = @cache.load("mlb_stats_api:teams:#{team_id}")
 
         if value
-          teams << value
+          teams << MLBStatsAPI::Team.new(value)
         else
           ids << team_id
         end
@@ -25,7 +27,7 @@ module MLBStatsAPI
       return teams if ids.none?
 
       get('/teams', teamId: ids.join(',')).dig('teams').each do |data|
-        teams << data
+        teams << MLBStatsAPI::Team.new(data)
 
         @cache.store("mlb_stats_api:teams:#{data['id']}", data)
       end

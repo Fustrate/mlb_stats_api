@@ -65,13 +65,13 @@ module MLBStatsAPI
     end
 
     def fetch(key)
-      value = @cache.load key
+      value = @cache[key]
 
       return value if value
 
       value = yield
 
-      @cache.store key, value
+      @cache[key] = value
 
       value
     end
