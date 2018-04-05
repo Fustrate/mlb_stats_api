@@ -36,7 +36,7 @@ module MLBStatsAPI
     end
 
     def full_name
-      "#{location} #{name}"
+      @data['name']
     end
 
     # So we don't get huge printouts
