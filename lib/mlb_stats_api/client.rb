@@ -28,7 +28,7 @@ module MLBStatsAPI
     headers 'Content-Type' => 'application/json'
     # , 'Accept-Encoding' => 'gzip, deflate'
 
-    base_uri 'http://statsapi.mlb.com'
+    base_uri 'http://statsapi-default-elb-prod-876255662.us-east-1.elb.amazonaws.com/'
 
     format :json
 
