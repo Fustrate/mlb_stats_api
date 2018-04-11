@@ -53,11 +53,7 @@ module MLBStatsAPI
 
       @logger&.info("Fetching URL: #{url} Query: #{query.inspect}")
 
-      response = if query.any?
-                   self.class.get(url, query: query)
-                 else
-                   self.class.get(url)
-                 end
+      response = self.class.get url, query: query.merge(t: Time.now.to_i)
 
       raise_exception(response) unless response.code == 200
 
