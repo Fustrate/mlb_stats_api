@@ -50,7 +50,7 @@ module MLBStatsAPI
         timecode: @data['metaData']['timeStamp']
       )
 
-      return process_diffs(diffs) if diffs.is_a(Array)
+      return process_diffs(diffs) if diffs.is_a?(Array)
 
       # If the diff is too large or too old, a new feed is returned
       @data = diffs if diffs.is_a?(Hash)
