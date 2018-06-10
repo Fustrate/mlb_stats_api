@@ -9,7 +9,7 @@ module MLBStatsAPI
       @data = data
 
       # If we need to nuke and start over, keep this piece
-      @id = data['gameData']['game']['pk']
+      @id = data['gamePk']
     end
 
     def boxscore
@@ -30,6 +30,18 @@ module MLBStatsAPI
 
     def plays
       @data['liveData']['plays']
+    end
+
+    def game_data
+      @data['gameData']
+    end
+
+    def live_data
+      @data['liveData']
+    end
+
+    def metadata
+      @data['metaData']
     end
 
     def timestamps
