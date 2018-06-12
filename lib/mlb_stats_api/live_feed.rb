@@ -52,6 +52,8 @@ module MLBStatsAPI
       @data = @api.get("/game/#{@id}/feed/live", version: '1.1')
 
       true
+    rescue Net::OpenTimeout
+      false
     end
 
     def update!
@@ -68,6 +70,8 @@ module MLBStatsAPI
       @data = diffs if diffs.is_a?(Hash)
 
       true
+    rescue Net::OpenTimeout
+      false
     end
 
     def process_diffs(diffs)
