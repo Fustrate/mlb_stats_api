@@ -58,7 +58,7 @@ module MLBStatsAPI
       response.parsed_response
     end
 
-    def fetch(key, options = {})
+    def load(key, options = {})
       value = @cache.load(key)
 
       return value if value

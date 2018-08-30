@@ -3,7 +3,7 @@
 module MLBStatsAPI
   module Teams
     def team(team_id)
-      data = fetch("mlb_stats_api:teams:#{team_id}") do
+      data = load("mlb_stats_api:teams:#{team_id}") do
         get("/teams/#{team_id}", hydrate: 'venue(timezone)').dig('teams', 0)
       end
 
