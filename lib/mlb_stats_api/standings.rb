@@ -16,7 +16,7 @@ module MLBStatsAPI
       by_league: 'byLeague'
     }.freeze
 
-    def standings(type:, league_ids:, season: nil)
+    def standings(league_ids:, type: :regular_season, season: nil)
       raise 'Invalid standings type.' unless STANDINGS_TYPES[type]
 
       get(
