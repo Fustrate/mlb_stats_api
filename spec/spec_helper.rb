@@ -12,7 +12,7 @@ HEADERS = [
 ].freeze
 
 def stubbed_get_response(request)
-  query = request.uri.query&.gsub(/\W/, '_') || ''
+  query = request.uri.query&.gsub(/[?&]?t=\d+/, '')&.gsub(/\W/, '_') || ''
 
   path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, '')]
   path << query unless query.empty?
