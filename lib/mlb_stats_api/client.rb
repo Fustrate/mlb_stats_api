@@ -58,8 +58,16 @@ module MLBStatsAPI
       response.parsed_response
     end
 
-    def fetch(key, options = {}, &block)
-      @cache.fetch(key, options, &block)
+    def fetch(key, options = {})
+      value = @cache.load(key)
+
+      return value if value
+
+      value = yield
+
+      @cache.store(key, value, options)
+
+      value
     end
 
     protected
