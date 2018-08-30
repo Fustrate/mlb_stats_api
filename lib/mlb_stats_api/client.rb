@@ -34,14 +34,12 @@ module MLBStatsAPI
 
     attr_accessor :logger, :cache
 
-    def initialize(logger: false, cache: nil)
+    def initialize(logger: IO::NULL, cache: nil)
       @cache = if cache
                  Moneta.new(cache.class.to_s.to_sym, backend: cache)
                else
                  Moneta.new(:Null)
                end
-
-      return if logger == false
 
       @logger = logger.is_a?(::Logger) ? logger : ::Logger.new(logger)
     end
@@ -51,7 +49,7 @@ module MLBStatsAPI
 
       query.reject! { |_, v| v.nil? }
 
-      @logger&.info("Fetching URL: #{url} Query: #{query.inspect}")
+      @logger.info("Fetching URL: #{url} Query: #{query.inspect}")
 
       response = self.class.get url, query: query.merge(t: Time.now.to_i)
 
