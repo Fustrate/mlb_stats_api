@@ -2,7 +2,7 @@
 
 module MLBStatsAPI
   module Standings
-    STANDINGS_TYPES = {
+    TYPES = {
       regular_season: 'regularSeason',
       wild_card: 'wildCard',
       division_leaders: 'divisionLeaders',
@@ -16,12 +16,18 @@ module MLBStatsAPI
       by_league: 'byLeague'
     }.freeze
 
-    def standings(league_ids:, type: :regular_season, season: nil)
-      raise 'Invalid standings type.' unless STANDINGS_TYPES[type]
+    def standings(leagues:, type: :regular_season, season: nil)
+      raise 'Invalid standings type.' unless TYPES[type]
+
+      league_ids = Leagues::LEAGUES.values_at(*leagues)
+
+      if league_ids.none?
+        raise 'Invalid league(s) - see Leagues::LEAGUES for available names.'
+      end
 
       get(
-        "/standings/#{STANDINGS_TYPES[type]}",
-        leagueId: Array(league_ids).join(','),
+        "/standings/#{TYPES[type]}",
+        leagueId: league_ids.join(','),
         season: (season || Date.today.year)
       )
     end
