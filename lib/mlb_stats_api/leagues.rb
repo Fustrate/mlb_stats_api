@@ -5,6 +5,8 @@ module MLBStatsAPI
     LEAGUES = {
       american: 103,
       national: 104,
+      al: 103,
+      nl: 104,
       big_east: 107,
       acc: 108,
       texas: 109,
