@@ -16,7 +16,7 @@ module MLBStatsAPI
       by_league: 'byLeague'
     }.freeze
 
-    def standings(leagues:, type: :regular_season, season: nil)
+    def standings(leagues:, type: :regular_season, season: nil, hydrate: 'team')
       raise 'Invalid standings type.' unless TYPES[type]
 
       league_ids = Leagues::LEAGUES.values_at(*leagues)
@@ -28,7 +28,8 @@ module MLBStatsAPI
       get(
         "/standings/#{TYPES[type]}",
         leagueId: league_ids.join(','),
-        season: (season || Date.today.year)
+        season: (season || Date.today.year),
+        hydrate: hydrate
       )
     end
   end
