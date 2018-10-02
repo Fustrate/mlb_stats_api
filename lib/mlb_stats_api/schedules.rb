@@ -13,7 +13,7 @@ module MLBStatsAPI
     def schedule(type = :default, options = {})
       raise ArgumentError, 'invalid schedule type' unless SCHEDULE_TYPES[type]
 
-      get(SCHEDULES[type], options)
+      get(SCHEDULE_TYPES[type], options)
     end
   end
 end
