@@ -11,6 +11,11 @@ module MLBStatsAPI
     }.freeze
 
     def schedule(type = :default, options = {})
+      if type.is_a?(Hash) && options.empty?
+        options = type
+        type = :default
+      end
+
       raise ArgumentError, 'invalid schedule type' unless SCHEDULE_TYPES[type]
 
       get(SCHEDULE_TYPES[type], options)
