@@ -2,8 +2,18 @@
 
 module MLBStatsAPI
   module Schedules
-    def schedule(options = {})
-      get('/schedule', options)
+    SCHEDULE_TYPES = {
+      default: '/schedule',
+      postseason: '/schedule/postseason',
+      tied: '/schedule/games/tied',
+      postseason_series: '/schedule/postseason/series',
+      tune_in: '/schedule/postseason/tuneIn'
+    }.freeze
+
+    def schedule(type = :default, options = {})
+      raise ArgumentError, 'invalid schedule type' unless SCHEDULE_TYPES[type]
+
+      get(SCHEDULES[type], options)
     end
   end
 end
