@@ -5,113 +5,117 @@ require 'spec_helper'
 RSpec.describe MLBStatsAPI::Config do
   let(:client) { MLBStatsAPI::Client.new }
 
+  before { WebMock.stub_request(:any, /amazonaws\.com/) }
+
   describe '#game_status' do
     it 'loads an extremely long list of game statuses' do
-      list = client.game_status
+      client.game_status
 
-      expect(list.length).to eq 197
+      expect(a_request(:get, %r{/api/v1/gameStatus})).to have_been_made
+    end
+  end
 
-      expect(list[100]['detailedState']).to eq 'Completed Early: Tragedy'
+  describe '#baseball_stats' do
+    it 'loads a list of baseball stats' do
+      client.baseball_stats
+
+      expect(a_request(:get, %r{/api/v1/baseballStats})).to have_been_made
     end
   end
 
   describe '#game_types' do
     it 'loads a not-so-long list of game types' do
-      list = client.game_types
+      client.game_types
 
-      expect(list.length).to eq 12
-
-      expect(list[7]['description']).to eq 'Nineteenth Century Series'
+      expect(a_request(:get, %r{/api/v1/gameTypes})).to have_been_made
     end
   end
 
   describe '#languages' do
     it 'loads a list of languages' do
-      list = client.languages
+      client.languages
 
-      expect(list.length).to eq 3
-
-      expect(list.map { |lang| lang['name'] }).to eq %w[English Spanish Korean]
+      expect(a_request(:get, %r{/api/v1/languages})).to have_been_made
     end
   end
 
   describe '#league_leader_types' do
     it 'loads a list of stats that can have leaders' do
-      list = client.league_leader_types
+      client.league_leader_types
 
-      expect(list.length).to eq 34
+      expect(a_request(:get, %r{/api/v1/leagueLeaderTypes})).to have_been_made
     end
   end
 
   describe '#metrics' do
     it 'loads a list of in-game metrics' do
-      list = client.metrics
+      client.metrics
 
-      expect(list.length).to eq 18
+      expect(a_request(:get, %r{/api/v1/metrics})).to have_been_made
     end
   end
 
   describe '#platforms' do
     it 'loads a list of media platforms' do
-      list = client.platforms
+      client.platforms
 
-      expect(list.length).to eq 12
+      expect(a_request(:get, %r{/api/v1/platforms})).to have_been_made
     end
   end
 
   describe '#positions' do
     it 'loads a list of in-game positions' do
-      list = client.positions
+      client.positions
 
-      expect(list.length).to eq 27
+      expect(a_request(:get, %r{/api/v1/positions})).to have_been_made
     end
   end
 
   describe '#roster_types' do
     it 'loads a list of types of rosters' do
-      list = client.roster_types
+      client.roster_types
 
-      expect(list.length).to eq 7
+      expect(a_request(:get, %r{/api/v1/rosterTypes})).to have_been_made
     end
   end
 
   describe '#schedule_event_types' do
     it 'loads a list of calendar event types' do
-      list = client.schedule_event_types
+      client.schedule_event_types
 
-      expect(list.length).to eq 19
+      expect(a_request(:get, %r{/api/v1/scheduleEventTypes})).to have_been_made
     end
   end
 
   describe '#situation_codes' do
     it 'loads a list of in-game situations' do
-      list = client.situation_codes
+      client.situation_codes
 
-      expect(list.length).to eq 602
+      expect(a_request(:get, %r{/api/v1/situationCodes})).to have_been_made
     end
   end
 
   describe '#standings_types' do
     it 'loads a list of standings types' do
-      list = client.standings_types
+      client.standings_types
 
-      expect(list.length).to eq 11
+      expect(a_request(:get, %r{/api/v1/standingsTypes})).to have_been_made
     end
   end
 
   describe '#stat_groups' do
     it 'loads a list of general stat groups' do
-      list = client.stat_groups
+      client.stat_groups
 
-      expect(list.length).to eq 4
+      expect(a_request(:get, %r{/api/v1/statGroups})).to have_been_made
     end
   end
 
   describe '#stat_types' do
     it 'loads a list of individual stats' do
-      list = client.stat_types
+      client.stat_types
 
-      expect(list.length).to eq 23
+      expect(a_request(:get, %r{/api/v1/statTypes})).to have_been_made
     end
   end
 end
