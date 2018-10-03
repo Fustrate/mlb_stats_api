@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
+  # Operations pertaining to leagues
+  # @see https://statsapi.mlb.com/docs/#tag/league
   module Leagues
     LEAGUES = {
       american: 103,

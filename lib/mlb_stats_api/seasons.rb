@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-# Although this group has two endpoints, they both have the same function.
-#
-# /v1/seasons/{seasonId} is the same as /v1/seasons?season={seasonId}
 module MLBStatsAPI
+  # Operations pertaining to seasons
+  # @see https://statsapi.mlb.com/docs/#tag/season
   module Seasons
     # Fetch one or more seasons' start and end dates
     #

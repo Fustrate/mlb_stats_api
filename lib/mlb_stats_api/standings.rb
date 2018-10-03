@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
+  # Operations pertaining to standings
+  # @see https://statsapi.mlb.com/docs/#tag/standings
   module Standings
     TYPES = {
       regular_season: 'regularSeason',
