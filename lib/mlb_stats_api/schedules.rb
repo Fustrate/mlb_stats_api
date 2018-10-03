@@ -18,7 +18,7 @@ module MLBStatsAPI
 
       raise ArgumentError, 'invalid schedule type' unless SCHEDULE_TYPES[type]
 
-      get(SCHEDULE_TYPES[type], options)
+      get SCHEDULE_TYPES[type], { sportId: 1 }.merge(options)
     end
   end
 end
