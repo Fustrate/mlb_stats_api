@@ -11,7 +11,7 @@ module MLBStatsAPI
     #
     # @return [Array<Hash>] a list of matching seasons
     def seasons(year: nil)
-      get('/seasons', sportId: 1, season: year)
+      get '/seasons', sportId: 1, season: year
     end
     alias season seasons
   end

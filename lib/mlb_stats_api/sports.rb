@@ -3,7 +3,7 @@
 module MLBStatsAPI
   module Sports
     def sports
-      get('/sports')
+      get '/sports'
     end
 
     def sport(sport_id)
