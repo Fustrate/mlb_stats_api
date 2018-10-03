@@ -14,6 +14,8 @@ RSpec.describe MLBStatsAPI::Client do
 
   describe '#get' do
     it 'sends a request to AWS' do
+      WebMock.stub_request(:any, /amazonaws\.com/)
+
       client.get('/standingsTypes')
 
       expect(a_request(:get, %r{amazonaws\.com/api/v1/standingsTypes}))
