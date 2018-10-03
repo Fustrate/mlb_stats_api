@@ -22,4 +22,20 @@ RSpec.describe MLBStatsAPI::Client do
         .to have_been_made
     end
   end
+
+  describe '#normalize_query_args' do
+    it 'does nothing with no arguments' do
+      expect(client.normalize_query_args({})).to eq({})
+    end
+
+    it 'removes nil values' do
+      expect(client.normalize_query_args(sportId: 1, type: nil))
+        .to eq(sportId: 1)
+    end
+
+    it 'turns arrays into comma-separated strings' do
+      expect(client.normalize_query_args(leagueIds: [103, 104]))
+        .to eq(leagueIds: '103,104')
+    end
+  end
 end

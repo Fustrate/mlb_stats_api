@@ -47,15 +47,22 @@ module MLBStatsAPI
     def get(endpoint, query = {})
       url = "/api/v#{query.delete(:version) || DEFAULT_VERSION}#{endpoint}"
 
-      query.reject! { |_, v| v.nil? }
+      args = normalize_query_args(query)
 
-      @logger.info("Fetching URL: #{url} Query: #{query.inspect}")
+      @logger.info "Fetching URL: #{url} Query: #{args.inspect}"
 
-      response = self.class.get url, query: query.merge(t: Time.now.to_i)
+      response = self.class.get url, query: args.merge(t: Time.now.to_i)
 
       raise_exception(response) unless response.code == 200
 
       response.parsed_response
+    end
+
+    def normalize_query_args(query)
+      query
+        .reject { |_, v| v.nil? }
+        .map { |key, val| [key, val.is_a?(Array) ? val.join(',') : val] }
+        .to_h
     end
 
     def load(key, options = {})
