@@ -1,9 +1,14 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
+  # These methods all return lists of possible values
   module Config
     def game_status
       get('/gameStatus')
+    end
+
+    def baseball_stats
+      get('/baseballStats')
     end
 
     def game_types
