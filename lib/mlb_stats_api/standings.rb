@@ -4,35 +4,20 @@ module MLBStatsAPI
   # Operations pertaining to standings
   # @see https://statsapi.mlb.com/docs/#tag/standings
   module Standings
-    TYPES = {
-      regular_season: 'regularSeason',
-      wild_card: 'wildCard',
-      division_leaders: 'divisionLeaders',
-      wild_card_with_leaders: 'wildCardWithLeaders',
-      first_half: 'firstHalf',
-      second_half: 'secondHalf',
-      spring_training: 'springTraining',
-      post_season: 'postseason',
-      by_division: 'byDivision',
-      by_conference: 'byConference',
-      by_league: 'byLeague'
-    }.freeze
+    # View standings for a league.
+    # @see https://statsapi.mlb.com/docs/#operation/standings
+    def standings(options = {})
+      options[:hydrate] = 'team' unless options.key?(:hydrate)
 
-    def standings(leagues:, type: :regular_season, season: nil, hydrate: 'team')
-      raise 'Invalid standings type.' unless TYPES[type]
+      if options[:leagues] && !options[:leagueId]
+        league_ids = Leagues::LEAGUES.values_at(*options.delete(:leagues))
 
-      league_ids = Leagues::LEAGUES.values_at(*leagues)
-
-      if league_ids.none?
-        raise 'Invalid league(s) - see Leagues::LEAGUES for available names.'
+        options[:leagueId] = league_ids
       end
 
-      get(
-        "/standings/#{TYPES[type]}",
-        leagueId: league_ids.join(','),
-        season: (season || Date.today.year),
-        hydrate: hydrate
-      )
+      options[:leagueId] = [103, 104] unless Array(options[:leagueId])&.any?
+
+      get '/standings', options
     end
   end
 end
