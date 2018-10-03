@@ -15,5 +15,13 @@ module MLBStatsAPI
     def sport(sport_id, options = {})
       get "/sports/#{sport_id}", options
     end
+
+    # View information on a players for a given sportId.
+    # @see https://statsapi.mlb.com/docs/#operation/sportPlayers
+    def sport_players(sport_id, season, options = {})
+      options[:season] = season
+
+      get "/sports/#{sport_id}/players", options
+    end
   end
 end

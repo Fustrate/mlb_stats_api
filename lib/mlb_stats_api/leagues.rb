@@ -22,5 +22,39 @@ module MLBStatsAPI
       international: 117,
       midwest: 118
     }.freeze
+
+    # View league information.
+    # @see https://statsapi.mlb.com/docs/#operation/league
+    def leagues(options = {})
+      unless options[:sportId] || options[:leagueId]
+        raise ArgumentError, '#leagues requires a sportId or leagueId'
+      end
+
+      get '/league', options
+    end
+
+    # View All-Star Ballots per league.
+    # @see https://statsapi.mlb.com/docs/#operation/allStarBallot
+    def all_star_ballot(league_id, season = nil, options = {})
+      options[:season] = season || Time.now.year
+
+      get "/league/#{league_id}/allStarBallot", options
+    end
+
+    # View All-Star Write-ins per league.
+    # @see https://statsapi.mlb.com/docs/#operation/allStarWriteIns
+    def all_star_write_ins(league_id, season = nil, options = {})
+      options[:season] = season || Time.now.year
+
+      get "/league/#{league_id}/allStarWriteIns", options
+    end
+
+    # View All-Star Final Vote per league.
+    # @see https://statsapi.mlb.com/docs/#operation/allStarFinalVote
+    def all_star_final_vote(league_id, season = nil, options = {})
+      options[:season] = season || Time.now.year
+
+      get "/league/#{league_id}/allStarFinalVote", options
+    end
   end
 end
