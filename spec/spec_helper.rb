@@ -5,17 +5,11 @@ require 'mlb_stats_api'
 require 'open-uri'
 require 'fileutils'
 
-HEADERS = [
-  'Content-Type', 'X-Requested-With', 'accept', 'Origin',
-  'Access-Control-Request-Method', 'Access-Control-Request-Headers',
-  'Authorization'
-].freeze
-
 def stubbed_get_response(request)
   query = request.uri.query&.gsub(/[?&]?t=\d+/, '')&.gsub(/\W/, '_') || ''
 
-  path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, '')]
-  path << query unless query.empty?
+  path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, ''), query]
+    .reject(&:empty?)
 
   data_file = File.expand_path "data/#{path.join('/')}", __dir__
 
@@ -23,25 +17,7 @@ def stubbed_get_response(request)
 
   {
     body: File.new(data_file),
-    status: 200,
-    headers: mocked_headers
-  }
-end
-
-def mocked_headers
-  {
-    'Access-Control-Allow-Credentials': 'true',
-    'Access-Control-Allow-Headers': HEADERS.join(','),
-    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Expose-Headers': HEADERS.join(','),
-    'Connection': 'keep-alive',
-    'Content-Encoding': 'gzip',
-    # 'Content-Length': '285',
-    'Content-Type': 'application/json;charset=UTF-8',
-    'Date': 'Thu, 08 Mar 2018 21:06:16 GMT',
-    'Server': 'Apache-Coyote/1.1',
-    'Vary': 'Accept-Encoding'
+    status: 200
   }
 end
 

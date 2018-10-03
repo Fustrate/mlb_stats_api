@@ -11,8 +11,7 @@ module MLBStatsAPI
     end
 
     def teams(*team_ids)
-      teams = []
-      ids = []
+      teams = ids = []
 
       team_ids.each do |team_id|
         value = @cache.load("mlb_stats_api:teams:#{team_id}")

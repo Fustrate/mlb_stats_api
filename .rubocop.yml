@@ -1,23 +1,9 @@
 AllCops:
-  Include:
-    - Rakefile
-    - Gemfile
   TargetRubyVersion: 2.5
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Metrics/AbcSize:
-  Enabled: false
-
-Metrics/ClassLength:
-  Max: 100
-
-Metrics/CyclomaticComplexity:
-  Enabled: false
-
-Metrics/MethodLength:
-  Max: 15
-
-Style/Documentation:
-  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
