@@ -25,9 +25,19 @@
 }, {
   "displayName" : "pitchArsenal"
 }, {
+  "displayName" : "sprayChart"
+}, {
+  "displayName" : "vsPlayer"
+}, {
+  "displayName" : "vsPlayer5Y"
+}, {
   "displayName" : "vsTeam"
 }, {
   "displayName" : "vsTeam5Y"
+}, {
+  "displayName" : "vsTeamTotal"
+}, {
+  "displayName" : "lastXGames"
 }, {
   "displayName" : "byDateRange"
 }, {
@@ -42,6 +52,8 @@
   "displayName" : "hotColdZones"
 }, {
   "displayName" : "availableStats"
+}, {
+  "displayName" : "opponentsFaced"
 }, {
   "displayName" : "statSplits"
 } ]

@@ -3,6 +3,10 @@
   "lookupName" : "40man",
   "parameter" : "40Man"
 }, {
+  "description" : "Full roster including active and inactive players for a season",
+  "lookupName" : "fullSeason",
+  "parameter" : "fullSeason"
+}, {
   "description" : "Full roster including active and inactive players",
   "lookupName" : "full",
   "parameter" : "fullRoster"

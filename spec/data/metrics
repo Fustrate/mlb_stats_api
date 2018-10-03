@@ -68,7 +68,7 @@
   "group" : "hitting",
   "name" : "hrDistance",
   "unit" : "FT",
-  "metricId" : 0
+  "metricId" : 1031
 }, {
   "group" : "hitting",
   "name" : "hitTrajectory",

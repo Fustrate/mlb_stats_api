@@ -236,4 +236,242 @@
     "explictModeOn" : true
   } ],
   "hasMinimums" : false
+}, {
+  "displayName" : "wildPitch",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "airOuts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "balk",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "blownSaves",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "catcherEarnedRunAverage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "catchersInterference",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "chances",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "completeGames",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "doublePlays",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "earnedRun",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "errors",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "gamesFinished",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "gamesStarted",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "hitBatsman",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "hitsPer9Inn",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "holds",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "innings",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "inningsPitched",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "outfieldAssists",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "passedBalls",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "pickoffs",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "pitchesPerInning",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "putOuts",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "rangeFactorPerGame",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "rangeFactorPer9Inn",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "saveOpportunities",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "stolenBasePercentage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "strikeoutsPer9Inn",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "strikeoutWalkRatio",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "throwingErrors",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "totalBattersFaced",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "triplePlays",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "walksPer9Inn",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
+}, {
+  "displayName" : "winPercentage",
+  "validSports" : [ {
+    "name" : "baseball",
+    "explictModeOn" : true
+  } ],
+  "hasMinimums" : false
 } ]
