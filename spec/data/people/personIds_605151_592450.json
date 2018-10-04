@@ -1,0 +1,94 @@
+{
+  "copyright" : "Copyright 2018 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "people" : [ {
+    "id" : 605151,
+    "fullName" : "Archie Bradley",
+    "link" : "/api/v1/people/605151",
+    "firstName" : "Archie",
+    "lastName" : "Bradley",
+    "primaryNumber" : "25",
+    "birthDate" : "1992-08-10",
+    "currentAge" : 26,
+    "birthCity" : "Muskogee",
+    "birthStateProvince" : "OK",
+    "birthCountry" : "USA",
+    "height" : "6' 4",
+    "weight" : 225,
+    "active" : true,
+    "primaryPosition" : {
+      "code" : "1",
+      "name" : "Pitcher",
+      "type" : "Pitcher",
+      "abbreviation" : "P"
+    },
+    "useName" : "Archie",
+    "middleName" : "N.",
+    "boxscoreName" : "Bradley, A",
+    "nickName" : "Hollywood",
+    "draftYear" : 2011,
+    "mlbDebutDate" : "2015-04-11",
+    "batSide" : {
+      "code" : "R",
+      "description" : "Right"
+    },
+    "pitchHand" : {
+      "code" : "R",
+      "description" : "Right"
+    },
+    "nameFirstLast" : "Archie Bradley",
+    "nameSlug" : "archie-bradley-605151",
+    "firstLastName" : "Archie Bradley",
+    "lastFirstName" : "Bradley, Archie",
+    "lastInitName" : "Bradley, A",
+    "initLastName" : "A Bradley",
+    "fullFMLName" : "Archie N. Bradley",
+    "fullLFMName" : "Bradley, Archie N.",
+    "strikeZoneTop" : 3.549,
+    "strikeZoneBottom" : 1.627
+  }, {
+    "id" : 592450,
+    "fullName" : "Aaron Judge",
+    "link" : "/api/v1/people/592450",
+    "firstName" : "Aaron",
+    "lastName" : "Judge",
+    "primaryNumber" : "99",
+    "birthDate" : "1992-04-26",
+    "currentAge" : 26,
+    "birthCity" : "Linden",
+    "birthStateProvince" : "CA",
+    "birthCountry" : "USA",
+    "height" : "6' 7",
+    "weight" : 282,
+    "active" : true,
+    "primaryPosition" : {
+      "code" : "9",
+      "name" : "Outfielder",
+      "type" : "Outfielder",
+      "abbreviation" : "RF"
+    },
+    "useName" : "Aaron",
+    "middleName" : "James",
+    "boxscoreName" : "Judge",
+    "nickName" : "All Rise",
+    "draftYear" : 2013,
+    "mlbDebutDate" : "2016-08-13",
+    "batSide" : {
+      "code" : "R",
+      "description" : "Right"
+    },
+    "pitchHand" : {
+      "code" : "R",
+      "description" : "Right"
+    },
+    "nameFirstLast" : "Aaron Judge",
+    "nameSlug" : "aaron-judge-592450",
+    "firstLastName" : "Aaron Judge",
+    "lastFirstName" : "Judge, Aaron",
+    "lastInitName" : "Judge, A",
+    "initLastName" : "A Judge",
+    "fullFMLName" : "Aaron James Judge",
+    "fullLFMName" : "Judge, Aaron James",
+    "strikeZoneTop" : 3.756,
+    "strikeZoneBottom" : 1.746
+  } ]
+}

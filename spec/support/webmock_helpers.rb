@@ -7,7 +7,7 @@ module WebmockHelpers
     path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, ''), query]
       .reject(&:empty?)
 
-    data_file = File.expand_path "../data/#{path.join('/')}", __dir__
+    data_file = File.expand_path "../data/#{path.join('/')}.json", __dir__
 
     raise "Could not locate #{data_file}" unless File.exist?(data_file)
 

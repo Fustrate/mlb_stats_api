@@ -9,9 +9,9 @@ module MLBStatsAPI
     def person(person_ids, options = {})
       ids = Array(person_ids)
 
-      result = get '/people', options.merge(personIds: ids)
+      result = get('/people', options.merge(personIds: ids)).dig('people')
 
-      return result.dig('people', 0) if ids.length == 1
+      return result.first if ids.length == 1
 
       result
     end
@@ -21,9 +21,9 @@ module MLBStatsAPI
     # @see https://statsapi.mlb.com/docs/#operation/currentGameStats
     def person_game_stats(person_id, options = {})
       get(
-        "/people/#{person_id}/game/#{options.delete(:gamePk) || 'current'}",
+        "/people/#{person_id}/stats/game/#{options.delete(:gamePk) || 'current'}",
         options
-      )
+      ).dig('stats')
     end
   end
 end

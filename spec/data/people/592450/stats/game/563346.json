@@ -1,0 +1,61 @@
+{
+  "copyright" : "Copyright 2018 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats" : [ {
+    "splits" : [ {
+      "stat" : {
+        "assists" : 0,
+        "putOuts" : 3,
+        "errors" : 0,
+        "chances" : 3,
+        "fielding" : ".000",
+        "passedBall" : 0
+      },
+      "type" : "gameLog",
+      "group" : "fielding"
+    }, {
+      "stat" : { },
+      "type" : "gameLog",
+      "group" : "pitching"
+    }, {
+      "stat" : {
+        "flyOuts" : 0,
+        "groundOuts" : 0,
+        "runs" : 2,
+        "doubles" : 1,
+        "triples" : 0,
+        "homeRuns" : 1,
+        "strikeOuts" : 1,
+        "baseOnBalls" : 1,
+        "hits" : 2,
+        "hitByPitch" : 0,
+        "atBats" : 3,
+        "caughtStealing" : 0,
+        "stolenBases" : 0,
+        "stolenBasePercentage" : ".---",
+        "totalBases" : 6,
+        "rbi" : 2,
+        "leftOnBase" : 0,
+        "sacBunts" : 0,
+        "sacFlies" : 0
+      },
+      "type" : "gameLog",
+      "group" : "hitting"
+    } ]
+  }, {
+    "type" : {
+      "displayName" : "vsPlayer5Y"
+    },
+    "group" : {
+      "displayName" : "hitting"
+    },
+    "splits" : [ ]
+  }, {
+    "type" : {
+      "displayName" : "vsPlayer5Y"
+    },
+    "group" : {
+      "displayName" : "pitching"
+    },
+    "splits" : [ ]
+  } ]
+}
