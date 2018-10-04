@@ -5,21 +5,7 @@ require 'mlb_stats_api'
 require 'open-uri'
 require 'fileutils'
 
-def stubbed_get_response(request)
-  query = request.uri.query&.gsub(/[?&]?t=\d+/, '')&.gsub(/\W/, '_') || ''
-
-  path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, ''), query]
-    .reject(&:empty?)
-
-  data_file = File.expand_path "data/#{path.join('/')}", __dir__
-
-  raise "Could not locate #{data_file}" unless File.exist?(data_file)
-
-  {
-    body: File.new(data_file),
-    status: 200
-  }
-end
+require 'support/webmock_helpers'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -40,9 +26,10 @@ RSpec.configure do |config|
 
   Kernel.srand config.seed
 
-  config.before(:each) do
-    WebMock.stub_request(:any, /amazonaws\.com/)
-      .to_return { |request| stubbed_get_response(request) }
+  config.include WebmockHelpers
+
+  config.before do
+    allow(Time).to receive(:now).and_return(Time.utc(2018, 10, 4, 9, 28, 41))
   end
 end
 
