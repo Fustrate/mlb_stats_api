@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
-  # Operations pertaining to players,umpires, and coaches
+  # Operations pertaining to players, umpires, and coaches
   # @see https://statsapi.mlb.com/docs/#tag/person
   module People
     # View one or more person's stats and biographical information.
@@ -17,13 +17,12 @@ module MLBStatsAPI
     end
     alias people person
 
-    #
+    # View a player's stats for a specific game.
     # @see https://statsapi.mlb.com/docs/#operation/currentGameStats
     def person_game_stats(person_id, options = {})
-      get(
-        "/people/#{person_id}/stats/game/#{options.delete(:gamePk) || 'current'}",
-        options
-      ).dig('stats')
+      game = options.delete(:gamePk) || 'current'
+
+      get("/people/#{person_id}/stats/game/#{game}", options).dig('stats')
     end
   end
 end
