@@ -5,9 +5,9 @@ require 'spec_helper'
 RSpec.describe MLBStatsAPI::People do
   let(:client) { MLBStatsAPI::Client.new }
 
-  describe '#person' do
-    before { stub_requests!(with_response: true) }
+  before { stub_requests!(with_response: true) }
 
+  describe '#person' do
     it 'finds one person by ID' do
       archie_bradley = client.person(605_151)
 
@@ -25,8 +25,6 @@ RSpec.describe MLBStatsAPI::People do
   end
 
   describe '#person_game_stats' do
-    before { stub_requests!(with_response: true) }
-
     it 'loads stats for a player in a game' do
       stats = client.person_game_stats(592_450, gamePk: 563_346)
 
