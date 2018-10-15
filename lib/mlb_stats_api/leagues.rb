@@ -26,8 +26,8 @@ module MLBStatsAPI
     # View league information.
     # @see https://statsapi.mlb.com/docs/#operation/league
     def leagues(options = {})
-      unless options[:sportId] || options[:leagueId]
-        raise ArgumentError, '#leagues requires a sportId or leagueId'
+      unless options[:sportId] || options[:leagueIds]
+        raise ArgumentError, '#leagues requires a sportId or leagueIds'
       end
 
       get '/league', options
