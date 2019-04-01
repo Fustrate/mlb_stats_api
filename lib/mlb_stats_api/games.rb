@@ -44,6 +44,7 @@ module MLBStatsAPI
     def color_feed(game_id, timecode: nil)
       MLBStatsAPI::ColorFeed.new(
         self,
+        game_id,
         get("/game/#{game_id}/feed/color", timecode: timecode)
       )
     end

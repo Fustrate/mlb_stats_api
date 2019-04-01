@@ -2,22 +2,22 @@
 
 module MLBStatsAPI
   class ColorFeed < Base
-    attr_reader :id
+    attr_reader :game_pk
 
-    def initialize(api, data)
+    def initialize(api, game_pk, data)
       @api = api
       @data = data
-
-      # If we need to nuke and start over, keep this piece
-      @id = data['game_pk']
+      @game_pk = game_pk
     end
 
     def items
+      return [] unless @data
+
       @data['items']
     end
 
     def reload!
-      @data = @api.get("/game/#{@id}/feed/color")
+      @data = @api.get("/game/#{@game_pk}/feed/color")
 
       true
     rescue Net::OpenTimeout
