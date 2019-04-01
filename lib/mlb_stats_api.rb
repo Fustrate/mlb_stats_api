@@ -8,6 +8,7 @@ require 'mlb_stats_api/errors'
 require 'mlb_stats_api/version'
 
 require 'mlb_stats_api/base'
+require 'mlb_stats_api/color_feed'
 require 'mlb_stats_api/live_feed'
 require 'mlb_stats_api/team'
 

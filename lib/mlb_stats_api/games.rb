@@ -41,6 +41,31 @@ module MLBStatsAPI
       get "/game/#{game_id}/feed/live/timestamps", version: '1.1'
     end
 
+    def color_feed(game_id, timecode: nil)
+      MLBStatsAPI::ColorFeed.new(
+        self,
+        get("/game/#{game_id}/feed/color", timecode: timecode)
+      )
+    end
+
+    # def color_feed_diff(game_id, timecode: nil, snapshot_at: nil)
+    #   query = {}
+
+    #   if timecode
+    #     query[:startTimecode] = timecode
+    #   elsif snapshot_at
+    #     query[:endTimecode] = snapshot_at
+    #   else
+    #     raise ArgumentError, 'Please pass either a timecode or a snapshot.'
+    #   end
+
+    #   get "/game/#{game_id}/feed/color/diffPatch", query
+    # end
+
+    # def color_feed_timestamps(game_id)
+    #   get "/game/#{game_id}/feed/color/timestamps"
+    # end
+
     def linescore(game_id)
       get "/game/#{game_id}/linescore"
     end
