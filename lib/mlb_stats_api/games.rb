@@ -2,6 +2,20 @@
 
 module MLBStatsAPI
   module Games
+    PREGAME_STATUSES = /
+      Preview|Warmup|Pre-Game|Delayed Start|Scheduled
+    /x.freeze
+
+    POSTGAME_STATUSES = /Final|Game Over|Postponed|Completed Early/.freeze
+
+    def self.pregame_status?(status)
+      PREGAME_STATUSES.match?(status)
+    end
+
+    def self.postgame_status?(status)
+      POSTGAME_STATUSES.match?(status)
+    end
+
     def boxscore(game_id)
       get "/game/#{game_id}/boxscore"
     end
