@@ -1,9 +1,24 @@
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
+Layout/LineLength:
+  Max: 100
+
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
