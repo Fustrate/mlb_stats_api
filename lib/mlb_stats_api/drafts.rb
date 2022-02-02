@@ -6,21 +6,15 @@ module MLBStatsAPI
   module Drafts
     # View drafted players by year.
     # @see https://statsapi.mlb.com/docs/#operation/draft
-    def draft(year, options = {})
-      get "/draft/#{year}", options
-    end
+    def draft(year, options = {}) = get("/draft/#{year}", options)
 
     # View draft eligible prospects by year.
     # @see https://statsapi.mlb.com/docs/#operation/draftProspects
-    def draft_prospects(year, options = {})
-      get "/draft/#{year}/prospects", options
-    end
+    def draft_prospects(year, options = {}) = get("/draft/#{year}/prospects", options)
 
     # View latest player drafted, endpoint best used when draft is currently
     # open.
     # @see https://statsapi.mlb.com/docs/#operation/latestDraftPicks
-    def draft_latest(year, options = {})
-      get "/draft/#{year}/latest", options
-    end
+    def draft_latest(year, options = {}) = get("/draft/#{year}/latest", options)
   end
 end

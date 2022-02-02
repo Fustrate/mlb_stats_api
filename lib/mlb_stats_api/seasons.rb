@@ -6,14 +6,10 @@ module MLBStatsAPI
   module Seasons
     # View current season info.
     # @see https://statsapi.mlb.com/docs/#operation/seasons
-    def seasons(options = {})
-      get '/seasons', { sportId: 1 }.merge(options)
-    end
+    def seasons(options = {}) = get('/seasons', { sportId: 1 }.merge(options))
 
     # View information on an individual season.
     # @see https://statsapi.mlb.com/docs/#operation/seasons
-    def season(year, options = {})
-      get "/seasons/#{year}", { sportId: 1 }.merge(options)
-    end
+    def season(year, options = {}) = get("/seasons/#{year}", { sportId: 1 }.merge(options))
   end
 end

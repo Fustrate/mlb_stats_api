@@ -4,7 +4,7 @@ module WebmockHelpers
   def stubbed_get_response(request)
     query = request.uri.query&.gsub(/[?&]?t=\d+/, '')&.gsub(/\W/, '_') || ''
 
-    path = [request.uri.path.gsub(%r{/?api/v[\d\.]+/?}, ''), query]
+    path = [request.uri.path.gsub(%r{/?api/v[\d.]+/?}, ''), query]
       .reject(&:empty?)
 
     data_file = File.expand_path "../data/#{path.join('/')}.json", __dir__

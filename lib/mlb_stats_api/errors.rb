@@ -3,6 +3,8 @@
 module MLBStatsAPI
   class Error < ::RuntimeError
     def initialize(response)
+      super()
+
       @response = response
     end
 

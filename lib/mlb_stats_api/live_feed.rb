@@ -5,48 +5,31 @@ module MLBStatsAPI
     attr_reader :id
 
     def initialize(api, data)
+      super(data)
+
       @api = api
-      @data = data
 
       # If we need to nuke and start over, keep this piece
       @id = data['gamePk']
     end
 
-    def boxscore
-      @data['liveData']['boxscore']
-    end
+    def boxscore() = @data['liveData']['boxscore']
 
-    def decisions
-      @data['liveData']['decisions']
-    end
+    def decisions() = @data['liveData']['decisions']
 
-    def leaders
-      @data['liveData']['leaders']
-    end
+    def leaders() = @data['liveData']['leaders']
 
-    def linescore
-      @data['liveData']['linescore']
-    end
+    def linescore() = @data['liveData']['linescore']
 
-    def plays
-      @data['liveData']['plays']
-    end
+    def plays() = @data['liveData']['plays']
 
-    def game_data
-      @data['gameData']
-    end
+    def game_data() = @data['gameData']
 
-    def live_data
-      @data['liveData']
-    end
+    def live_data() = @data['liveData']
 
-    def metadata
-      @data['metaData']
-    end
+    def metadata() = @data['metaData']
 
-    def timestamps
-      @api.live_feed_timestamps(@id)
-    end
+    def timestamps() = @api.live_feed_timestamps(@id)
 
     def reload!
       @data = @api.get("/game/#{@id}/feed/live", version: '1.1')

@@ -61,9 +61,7 @@ module MLBStatsAPI
     end
 
     def normalize_query_args(query)
-      query
-        .reject { |_, v| v.nil? }
-        .transform_values { |val| val.is_a?(Array) ? val.join(',') : val }
+      query.compact.transform_values { |val| val.is_a?(Array) ? val.join(',') : val }
     end
 
     def load(key, options = {})

@@ -5,8 +5,9 @@ module MLBStatsAPI
     attr_reader :game_pk
 
     def initialize(api, game_pk, data)
+      super(data)
+
       @api = api
-      @data = data
       @game_pk = game_pk
     end
 

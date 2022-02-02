@@ -26,14 +26,10 @@ module MLBStatsAPI
       teams.concat load_teams_by_id(ids)
     end
 
-    def affiliates(team_id, season: nil)
-      get "/teams/#{team_id}/affiliates", season: season
-    end
+    def affiliates(team_id, season: nil) = get("/teams/#{team_id}/affiliates", season:)
 
     def coaches(team_id, date: nil)
-      date ||= Date.today
-
-      get "/teams/#{team_id}/coaches", date: date.strftime('%m/%d/%Y')
+      get "/teams/#{team_id}/coaches", date: (date || Date.today).strftime('%m/%d/%Y')
     end
 
     # def leaders(team_id)
@@ -49,13 +45,11 @@ module MLBStatsAPI
     def load_teams_by_id(ids)
       return [] if ids.none?
 
-      get('/teams', teamId: ids.join(','), hydrate: 'venue(timezone)')
-        .dig('teams')
-        .map do |data|
-          @cache.store("mlb_stats_api:teams:#{data['id']}", data)
+      get('/teams', teamId: ids.join(','), hydrate: 'venue(timezone)')['teams'].map do |data|
+        @cache.store("mlb_stats_api:teams:#{data['id']}", data)
 
-          MLBStatsAPI::Team.new(data)
-        end
+        MLBStatsAPI::Team.new(data)
+      end
     end
   end
 end

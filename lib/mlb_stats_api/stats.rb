@@ -16,9 +16,7 @@ module MLBStatsAPI
     # View leaders for a statistic.
     # @see https://statsapi.mlb.com/docs/#operation/leaders
     def stats_leaders(options = {})
-      unless options[:leaderCategories]
-        raise ArgumentError, '#stats_leaders requires a leaderCategories arg'
-      end
+      raise ArgumentError, '#stats_leaders requires a leaderCategories arg' unless options[:leaderCategories]
 
       get '/stats/leaders', options
     end

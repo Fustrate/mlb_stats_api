@@ -16,8 +16,6 @@ module MLBStatsAPI
 
     # View league division directorial information.
     # @see https://statsapi.mlb.com/docs/#operation/divisions
-    def divisions(options = {})
-      get '/divisions', options
-    end
+    def divisions(options = {}) = get('/divisions', options)
   end
 end
