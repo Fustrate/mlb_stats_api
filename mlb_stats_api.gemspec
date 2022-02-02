@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary = %(MLB has a new Stats API!)
   spec.homepage = 'http://github.com/fustrate/mlb_stats_api'
   spec.license = 'MIT'
+  spec.required_ruby_version = '>= 3.1.0'
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
