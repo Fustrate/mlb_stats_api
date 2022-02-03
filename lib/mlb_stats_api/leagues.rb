@@ -2,7 +2,6 @@
 
 module MLBStatsAPI
   # Operations pertaining to leagues
-  # @see https://statsapi.mlb.com/docs/#tag/league
   module Leagues
     LEAGUES = {
       american: 103,
@@ -24,7 +23,6 @@ module MLBStatsAPI
     }.freeze
 
     # View league information.
-    # @see https://statsapi.mlb.com/docs/#operation/league
     def leagues(options = {})
       raise ArgumentError, '#leagues requires a sportId or leagueIds' unless options[:sportId] || options[:leagueIds]
 
@@ -32,7 +30,6 @@ module MLBStatsAPI
     end
 
     # View All-Star Ballots per league.
-    # @see https://statsapi.mlb.com/docs/#operation/allStarBallot
     def all_star_ballot(league_id, season = nil, options = {})
       options[:season] = season || Time.now.year
 
@@ -40,7 +37,6 @@ module MLBStatsAPI
     end
 
     # View All-Star Write-ins per league.
-    # @see https://statsapi.mlb.com/docs/#operation/allStarWriteIns
     def all_star_write_ins(league_id, season = nil, options = {})
       options[:season] = season || Time.now.year
 
@@ -48,7 +44,6 @@ module MLBStatsAPI
     end
 
     # View All-Star Final Vote per league.
-    # @see https://statsapi.mlb.com/docs/#operation/allStarFinalVote
     def all_star_final_vote(league_id, season = nil, options = {})
       options[:season] = season || Time.now.year
 

@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 module MLBStatsAPI
-  # @see https://statsapi.mlb.com/docs/#tag/division
   module Divisions
     # There are actually far more divisions from other leagues in the API.
     # I don't think I'll add them until necessary.
@@ -15,7 +14,6 @@ module MLBStatsAPI
     }.freeze
 
     # View league division directorial information.
-    # @see https://statsapi.mlb.com/docs/#operation/divisions
     def divisions(options = {}) = get('/divisions', options)
   end
 end

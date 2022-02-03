@@ -15,8 +15,8 @@ module MLBStatsAPI
 
     def context_metrics(game_id, timecode: nil) = get("/game/#{game_id}/contextMetrics", timecode:)
 
-    # This endpoint can return very large payloads. It is STRONGLY recommended that clients ask for
-    # diffs and use "Accept-Encoding: gzip" header.
+    # This endpoint can return very large payloads. It is STRONGLY recommended that clients ask for diffs and use
+    # "Accept-Encoding: gzip" header.
     def live_feed(game_id, timecode: nil)
       MLBStatsAPI::LiveFeed.new self, get("/game/#{game_id}/feed/live", version: '1.1', timecode:)
     end

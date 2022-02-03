@@ -2,10 +2,8 @@
 
 module MLBStatsAPI
   # Operations pertaining to standings
-  # @see https://statsapi.mlb.com/docs/#tag/standings
   module Standings
     # View standings for a league.
-    # @see https://statsapi.mlb.com/docs/#operation/standings
     def standings(options = {})
       options[:hydrate] = 'team' unless options.key?(:hydrate)
 

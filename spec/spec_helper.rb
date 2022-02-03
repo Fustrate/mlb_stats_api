@@ -33,6 +33,6 @@ RSpec.configure do |config|
   end
 end
 
-# We never want to actually hit the API. All data should be stored in the data
-# directory, and new data can be found through the Postman client.
+# We never want to actually hit the API. All data should be stored in the data directory, and new data can be found
+# through the Postman client.
 WebMock.disable_net_connect!
