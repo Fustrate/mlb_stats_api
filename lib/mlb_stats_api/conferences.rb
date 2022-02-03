@@ -6,7 +6,7 @@ module MLBStatsAPI
     # View all PCL conferences.
     def conferences(options = {}) = get('/conferences', options)
 
-    # View PCL conferences by conferenceId.
+    # View PCL conferences by conference ID.
     def conference(conference_id, options = {}) = get("/conferences/#{conference_id}", options)
   end
 end

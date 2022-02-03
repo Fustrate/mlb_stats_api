@@ -3,7 +3,7 @@
 module MLBStatsAPI
   # Operations pertaining to venues
   module Venues
-    # View information for a venue based on venueId.
+    # View information for a venue based on venue ID.
     def venue(venue_id) = get("/venues/#{venue_id}").dig('venues', 0)
   end
 end
