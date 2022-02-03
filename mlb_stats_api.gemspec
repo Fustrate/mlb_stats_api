@@ -9,6 +9,9 @@ Gem::Specification.new do |spec|
   spec.version = MLBStatsAPI::VERSION
   spec.authors = ['Steven Hoffman']
   spec.email = ['git@fustrate.com']
+  spec.metadata = {
+    'rubygems_mfa_required' => 'true'
+  }
 
   spec.summary = %(MLB has a new Stats API!)
   spec.homepage = 'http://github.com/fustrate/mlb_stats_api'

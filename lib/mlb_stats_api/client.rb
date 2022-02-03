@@ -60,9 +60,7 @@ module MLBStatsAPI
       response.parsed_response
     end
 
-    def normalize_query_args(query)
-      query.compact.transform_values { |val| val.is_a?(Array) ? val.join(',') : val }
-    end
+    def normalize_query_args(query) = query.compact.transform_values { |val| val.is_a?(Array) ? val.join(',') : val }
 
     def load(key, options = {})
       value = @cache.load(key)
