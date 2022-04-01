@@ -13,23 +13,23 @@ module MLBStatsAPI
       @id = data['gamePk']
     end
 
-    def boxscore() = @data['liveData']['boxscore']
+    def boxscore = @data['liveData']['boxscore']
 
-    def decisions() = @data['liveData']['decisions']
+    def decisions = @data['liveData']['decisions']
 
-    def leaders() = @data['liveData']['leaders']
+    def leaders = @data['liveData']['leaders']
 
-    def linescore() = @data['liveData']['linescore']
+    def linescore = @data['liveData']['linescore']
 
-    def plays() = @data['liveData']['plays']
+    def plays = @data['liveData']['plays']
 
-    def game_data() = @data['gameData']
+    def game_data = @data['gameData']
 
-    def live_data() = @data['liveData']
+    def live_data = @data['liveData']
 
-    def metadata() = @data['metaData']
+    def metadata = @data['metaData']
 
-    def timestamps() = @api.live_feed_timestamps(@id)
+    def timestamps = @api.live_feed_timestamps(@id)
 
     def reload!
       @data = @api.get("/game/#{@id}/feed/live", version: '1.1')

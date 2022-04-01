@@ -19,7 +19,7 @@ RSpec.describe MLBStatsAPI::People do
     it 'finds multiple people by ID' do
       players = client.people([605_151, 592_450])
 
-      expect(players.map { |player| player['fullName'] })
+      expect(players.map { _1['fullName'] })
         .to eq ['Archie Bradley', 'Aaron Judge']
     end
   end

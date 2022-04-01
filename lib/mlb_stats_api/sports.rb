@@ -4,7 +4,7 @@ module MLBStatsAPI
   # Operations pertaining to sports
   module Sports
     # View information for all sports.
-    def sports() = get('/sports')
+    def sports = get('/sports')
 
     # View information for any given sport ID.
     def sport(sport_id, options = {}) = get("/sports/#{sport_id}", options)

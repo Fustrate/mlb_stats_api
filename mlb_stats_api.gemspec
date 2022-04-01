@@ -18,20 +18,18 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1.0'
 
-  spec.files = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
+  spec.files = `git ls-files -z`.split("\x0").reject { _1.match(%r{^(test|spec|features)/}) }
   spec.bindir = 'exe'
-  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables = spec.files.grep(%r{^exe/}) { File.basename(_1) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '> 1.16'
-  spec.add_development_dependency 'rake', '> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.9'
-  spec.add_development_dependency 'rubocop', '~> 1.25'
-  spec.add_development_dependency 'webmock', '~> 3.8'
+  spec.add_development_dependency 'bundler', '> 2.3'
+  spec.add_development_dependency 'rake', '> 13.0'
+  spec.add_development_dependency 'rspec', '~> 3.11'
+  spec.add_development_dependency 'rubocop', '~> 1.26'
+  spec.add_development_dependency 'webmock', '~> 3.14'
 
   spec.add_dependency 'hana', '~> 1.3'
-  spec.add_dependency 'httparty', '~> 0.18'
-  spec.add_dependency 'moneta', '~> 1.3'
+  spec.add_dependency 'httparty', '~> 0.20'
+  spec.add_dependency 'moneta', '~> 1.4'
 end

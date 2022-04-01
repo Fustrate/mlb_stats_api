@@ -25,7 +25,7 @@ module WebmockHelpers
   def stub_requests!(with_response: false)
     if with_response
       WebMock.stub_request(:any, /(?:amazonaws|mlb)\.com/)
-        .to_return { |request| stubbed_get_response(request) }
+        .to_return { stubbed_get_response(_1) }
     else
       WebMock.stub_request(:any, /(?:amazonaws|mlb)\.com/)
     end
