@@ -14,6 +14,6 @@ module MLBStatsAPI
     }.freeze
 
     # View league division directorial information.
-    def divisions(options = {}) = get('/divisions', options)
+    def divisions(**options) = get('/divisions', **options)
   end
 end

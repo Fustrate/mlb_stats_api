@@ -9,21 +9,19 @@ module MLBStatsAPI
     end
 
     def to_s
+      # @response.response
       format(
         '%<code>s: %<message>s (%<uri>s)',
         code: @response.code,
-        message: '', # @response.response,
+        message: '',
         uri: @response.request.last_uri.to_s
       )
     end
   end
 
-  class ForbiddenError < Error
-  end
+  class ForbiddenError < Error; end
 
-  class NotFoundError < Error
-  end
+  class NotFoundError < Error; end
 
-  class UnauthorizedError < Error
-  end
+  class UnauthorizedError < Error; end
 end

@@ -23,31 +23,31 @@ module MLBStatsAPI
     }.freeze
 
     # View league information.
-    def leagues(options = {})
+    def leagues(**options)
       raise ArgumentError, '#leagues requires a sportId or leagueIds' unless options[:sportId] || options[:leagueIds]
 
-      get '/league', options
+      get '/league', **options
     end
 
     # View All-Star Ballots per league.
-    def all_star_ballot(league_id, season = nil, options = {})
+    def all_star_ballot(league_id, season = nil, **options)
       options[:season] = season || Time.now.year
 
-      get "/league/#{league_id}/allStarBallot", options
+      get "/league/#{league_id}/allStarBallot", **options
     end
 
     # View All-Star Write-ins per league.
-    def all_star_write_ins(league_id, season = nil, options = {})
+    def all_star_write_ins(league_id, season = nil, **options)
       options[:season] = season || Time.now.year
 
-      get "/league/#{league_id}/allStarWriteIns", options
+      get "/league/#{league_id}/allStarWriteIns", **options
     end
 
     # View All-Star Final Vote per league.
-    def all_star_final_vote(league_id, season = nil, options = {})
+    def all_star_final_vote(league_id, season = nil, **options)
       options[:season] = season || Time.now.year
 
-      get "/league/#{league_id}/allStarFinalVote", options
+      get "/league/#{league_id}/allStarFinalVote", **options
     end
   end
 end

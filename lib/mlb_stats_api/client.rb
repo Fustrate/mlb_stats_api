@@ -46,7 +46,7 @@ module MLBStatsAPI
       @logger = logger.is_a?(::Logger) ? logger : ::Logger.new(logger)
     end
 
-    def get(endpoint, query = {})
+    def get(endpoint, **query)
       url = "/api/v#{query.delete(:version) || DEFAULT_VERSION}#{endpoint}"
 
       args = normalize_query_args(query)
@@ -62,7 +62,7 @@ module MLBStatsAPI
 
     def normalize_query_args(query) = query.compact.transform_values { _1.is_a?(Array) ? _1.join(',') : _1 }
 
-    def load(key, options = {})
+    def load(key, **options)
       value = @cache.load(key)
 
       return value if value

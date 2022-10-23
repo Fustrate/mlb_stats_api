@@ -4,7 +4,7 @@ module MLBStatsAPI
   # Operations pertaining to standings
   module Standings
     # View standings for a league.
-    def standings(options = {})
+    def standings(**options)
       options[:hydrate] = 'team' unless options.key?(:hydrate)
 
       if options[:leagues] && !options[:leagueId]
@@ -15,7 +15,7 @@ module MLBStatsAPI
 
       options[:leagueId] = [103, 104] unless Array(options[:leagueId])&.any?
 
-      get '/standings', options
+      get '/standings', **options
     end
   end
 end

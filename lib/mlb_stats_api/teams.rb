@@ -28,17 +28,11 @@ module MLBStatsAPI
 
     def affiliates(team_id, season: nil) = get("/teams/#{team_id}/affiliates", season:)
 
-    def coaches(team_id, date: nil)
-      get "/teams/#{team_id}/coaches", date: (date || Date.today).strftime('%m/%d/%Y')
-    end
+    def coaches(team_id, date: nil) = get("/teams/#{team_id}/coaches", date: (date || Date.today).strftime('%m/%d/%Y'))
 
-    # def leaders(team_id)
-    #   get("/teams/#{team_id}/leaders")
-    # end
+    # def leaders(team_id) = get("/teams/#{team_id}/leaders")
 
-    def roster(team_id, type:, date: nil)
-      get "/teams/#{team_id}/roster/#{type}", date: date.strftime('%m/%d/%Y')
-    end
+    def roster(team_id, type:, date: nil) = get("/teams/#{team_id}/roster/#{type}", date: date.strftime('%m/%d/%Y'))
 
     protected
 

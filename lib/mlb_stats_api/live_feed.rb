@@ -13,21 +13,21 @@ module MLBStatsAPI
       @id = data['gamePk']
     end
 
-    def boxscore = @data['liveData']['boxscore']
-
-    def decisions = @data['liveData']['decisions']
-
-    def leaders = @data['liveData']['leaders']
-
-    def linescore = @data['liveData']['linescore']
-
-    def plays = @data['liveData']['plays']
-
     def game_data = @data['gameData']
 
     def live_data = @data['liveData']
 
     def metadata = @data['metaData']
+
+    def boxscore = @data.dig('liveData', 'boxscore')
+
+    def decisions = @data.dig('liveData', 'decisions')
+
+    def leaders = @data.dig('liveData', 'leaders')
+
+    def linescore = @data.dig('liveData', 'linescore')
+
+    def plays = @data.dig('liveData', 'plays')
 
     def timestamps = @api.live_feed_timestamps(@id)
 
@@ -44,7 +44,7 @@ module MLBStatsAPI
 
       diffs = @api.live_feed_diff(
         @data['gamePk'],
-        timecode: @data['metaData']['timeStamp']
+        timecode: @data.dig('metaData', 'timeStamp')
       )
 
       return process_diffs(diffs) if diffs.is_a?(Array)
