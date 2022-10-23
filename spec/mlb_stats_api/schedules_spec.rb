@@ -22,28 +22,28 @@ RSpec.describe MLBStatsAPI::Schedules do
     end
 
     it 'loads a postseason schedule' do
-      client.schedule :postseason
+      client.schedule type: :postseason
 
       expect(a_get_request('v1/schedule/postseason', sportId: '1'))
         .to have_been_made
     end
 
     it 'loads a tied games schedule' do
-      client.schedule :tied
+      client.schedule type: :tied
 
       expect(a_get_request('v1/schedule/games/tied', sportId: '1'))
         .to have_been_made
     end
 
     it 'loads a postseason series schedule' do
-      client.schedule :postseason_series
+      client.schedule type: :postseason_series
 
       expect(a_get_request('v1/schedule/postseason/series', sportId: '1'))
         .to have_been_made
     end
 
     it 'loads a postseason tuneIn schedule' do
-      client.schedule :tune_in
+      client.schedule type: :tune_in
 
       expect(a_get_request('v1/schedule/postseason/tuneIn', sportId: '1'))
         .to have_been_made

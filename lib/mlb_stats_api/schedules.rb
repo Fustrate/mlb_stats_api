@@ -10,15 +10,12 @@ module MLBStatsAPI
       tune_in: '/schedule/postseason/tuneIn'
     }.freeze
 
-    def schedule(type = :default, options = {})
-      if type.is_a?(Hash) && options.empty?
-        options = type
-        type = :default
-      end
+    def schedule(**options)
+      endpoint = SCHEDULE_TYPES[options.delete(:type) || :default]
 
-      raise ArgumentError, 'invalid schedule type' unless SCHEDULE_TYPES[type]
+      raise ArgumentError, 'Invalid schedule type.' unless endpoint
 
-      get SCHEDULE_TYPES[type], { sportId: 1 }.merge(options)
+      get endpoint, **{ sportId: 1 }.merge(options)
     end
   end
 end
