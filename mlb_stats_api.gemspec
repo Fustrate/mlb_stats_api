@@ -26,10 +26,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '> 2.3'
   spec.add_development_dependency 'rake', '> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.11'
-  spec.add_development_dependency 'rubocop', '~> 1.26'
-  spec.add_development_dependency 'webmock', '~> 3.14'
+  spec.add_development_dependency 'rubocop', '~> 1.37'
+  spec.add_development_dependency 'webmock', '~> 3.18'
 
   spec.add_dependency 'hana', '~> 1.3'
   spec.add_dependency 'httparty', '~> 0.20'
-  spec.add_dependency 'moneta', '~> 1.4'
+  spec.add_dependency 'moneta', '~> 1.5'
 end
