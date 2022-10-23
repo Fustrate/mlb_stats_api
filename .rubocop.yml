@@ -1,13 +1,74 @@
 AllCops:
-  TargetRubyVersion: 3.1
+  EnabledByDefault: true
   NewCops: enable
+  SuggestExtensions: false
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Coding Style
+# ----------------------------------------------------------------------------------------------------------------------
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
-Metrics/BlockLength:
-  Exclude:
-    - 'spec/**/*'
+# ----------------------------------------------------------------------------------------------------------------------
+# Cops that should not be run
+# ----------------------------------------------------------------------------------------------------------------------
 
+# Recommends each array item be on its own line.
+Layout/MultilineArrayLineBreaks:
+  Enabled: false
+
+# Recommends right hand side of multi-line assignment be on a new line
+Layout/MultilineAssignmentLayout:
+  Enabled: false
+
+# Wants every argument in a multi-line method call to be on its own line
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: false
+
+# Recommends squishing a multi-line hash into one line. I don't like that. It's not readable.
+Layout/RedundantLineBreak:
+  Enabled: false
+
+# Recommends `::File` instead of `File`
+Lint/ConstantResolution:
+  Enabled: false
+
+# Converts if-elsif to case-when.
+Style/CaseLikeIf:
+  Enabled: false
+
+# Wants every constant to be listed in #public_constant or #private_constant
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+# Every class and module *should* be documented, but I don't have the time
 Style/Documentation:
+  Enabled: false
+
+# Every method *should* be documented, but I don't have the time
+Style/DocumentationMethod:
+  Enabled: false
+
+# Converts [1, 2, three: 3] to [1, 2, { three: 3 }]
+Style/HashAsLastArrayItem:
+  Enabled: false
+
+# Converts `a_method 1` to `a_method(1)`
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+# Not every `if` needs an `else`
+Style/MissingElse:
+  Enabled: false
+
+# HTTP headers need to use string keys
+Style/StringHashKeys:
+  Enabled: false
+
+# I consider myself capable of understanding logical operators in an unless
+Style/UnlessLogicalOperators:
   Enabled: false
