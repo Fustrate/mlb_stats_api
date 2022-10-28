@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hana'
+
 module MLBStatsAPI
   class ColorFeed < Base
     attr_reader :game_pk

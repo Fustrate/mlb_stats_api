@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
+require 'httparty'
+require 'json'
 require 'logger'
 require 'moneta'
 
 module MLBStatsAPI
   class Client
-    include HTTParty
+    include ::HTTParty
 
     include MLBStatsAPI::Conferences
     include MLBStatsAPI::Config

@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'hana'
+
 module MLBStatsAPI
   class LiveFeed < Base
     attr_reader :id
