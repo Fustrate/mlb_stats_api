@@ -14,7 +14,7 @@ module MLBStatsAPI
       teams = ids = []
 
       team_ids.each do |team_id|
-        value = @cache.load("mlb_stats_api:teams:#{team_id}")
+        value = cache.load("mlb_stats_api:teams:#{team_id}")
 
         if value
           teams << MLBStatsAPI::Team.new(value)
@@ -40,7 +40,7 @@ module MLBStatsAPI
       return [] if ids.none?
 
       get('/teams', teamId: ids.join(','), hydrate: 'venue(timezone)')['teams'].map do |data|
-        @cache.store("mlb_stats_api:teams:#{data['id']}", data)
+        cache.store("mlb_stats_api:teams:#{data['id']}", data)
 
         MLBStatsAPI::Team.new(data)
       end

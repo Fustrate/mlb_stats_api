@@ -63,13 +63,13 @@ module MLBStatsAPI
     def normalize_query_args(query) = query.compact.transform_values { _1.is_a?(Array) ? _1.join(',') : _1 }
 
     def load(key, **options)
-      value = @cache.load(key)
+      value = cache.load(key)
 
       return value if value
 
       value = yield
 
-      @cache.store(key, value, options)
+      cache.store(key, value, options)
 
       value
     end
