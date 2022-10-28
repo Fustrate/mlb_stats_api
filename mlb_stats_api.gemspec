@@ -9,9 +9,7 @@ Gem::Specification.new do |spec|
   spec.version = MLBStatsAPI::VERSION
   spec.authors = ['Steven Hoffman']
   spec.email = ['git@fustrate.com']
-  spec.metadata = {
-    'rubygems_mfa_required' => 'true'
-  }
+  spec.metadata = { 'rubygems_mfa_required' => 'true' }
 
   spec.summary = %(MLB has a new Stats API!)
   spec.homepage = 'http://github.com/fustrate/mlb_stats_api'
@@ -32,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'hana', '~> 1.3'
   spec.add_dependency 'httparty', '~> 0.20'
   spec.add_dependency 'moneta', '~> 1.5'
+  spec.add_dependency 'zeitwerk', '~> 2.6'
 end
