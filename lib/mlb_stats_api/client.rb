@@ -81,13 +81,13 @@ module MLBStatsAPI
     def raise_exception(response)
       case response.code
       when 401
-        raise MLBStatsAPI::UnauthorizedError, response
+        raise MLBStatsAPI::Errors::UnauthorizedError, response
       when 403
-        raise MLBStatsAPI::ForbiddenError, response
+        raise MLBStatsAPI::Errors::ForbiddenError, response
       when 404
-        raise MLBStatsAPI::NotFoundError, response
+        raise MLBStatsAPI::Errors::NotFoundError, response
       else
-        raise MLBStatsAPI::Error, response
+        raise MLBStatsAPI::Errors::Error, response
       end
     end
   end
