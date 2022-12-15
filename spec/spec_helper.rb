@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'webmock/rspec'
+require 'fileutils'
 require 'mlb_stats_api'
 require 'open-uri'
-require 'fileutils'
+require 'webmock/rspec'
 
 require 'support/webmock_helpers'
 
