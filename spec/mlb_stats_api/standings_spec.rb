@@ -42,5 +42,12 @@ RSpec.describe MLBStatsAPI::Schedules do
       expect(a_get_request('v1/standings', hydrate: 'team', leagueId: '103', standingsTypes: 'wildCard'))
         .to have_been_made
     end
+
+    it 'loads spring training standings' do
+      client.standings(standingsTypes: :springTraining)
+
+      expect(a_get_request('v1/standings', hydrate: 'team', leagueId: '114,115', standingsTypes: 'springTraining'))
+        .to have_been_made
+    end
   end
 end

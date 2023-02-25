@@ -13,7 +13,9 @@ module MLBStatsAPI
         options[:leagueId] = league_ids
       end
 
-      options[:leagueId] = [103, 104] unless Array(options[:leagueId])&.any?
+      unless Array(options[:leagueId])&.any?
+        options[:leagueId] = options[:standingsTypes] == :springTraining ? [114, 115] : [103, 104]
+      end
 
       get '/standings', **options
     end
