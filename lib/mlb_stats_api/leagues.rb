@@ -4,22 +4,22 @@ module MLBStatsAPI
   # Operations pertaining to leagues
   module Leagues
     LEAGUES = {
-      american: 103,
-      national: 104,
-      al: 103,
-      nl: 104,
-      big_east: 107,
       acc: 108,
-      texas: 109,
-      california: 110,
-      southern: 111,
-      pcl: 112,
-      eastern: 113,
+      al: 103,
+      american: 103,
+      big_east: 107,
       cactus: 114,
+      california: 110,
+      eastern: 113,
       grapefruit: 115,
-      south_atlantic: 116,
       international: 117,
-      midwest: 118
+      midwest: 118,
+      national: 104,
+      nl: 104,
+      pcl: 112,
+      south_atlantic: 116,
+      southern: 111,
+      texas: 109
     }.freeze
 
     # View league information.
