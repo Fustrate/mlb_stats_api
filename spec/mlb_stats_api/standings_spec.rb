@@ -11,9 +11,8 @@ RSpec.describe MLBStatsAPI::Schedules do
     it 'loads general standings with default arguments' do
       client.standings
 
-      expect(
-        a_get_request('v1/standings', hydrate: 'team', leagueId: '103,104')
-      ).to have_been_made
+      expect(a_get_request('v1/standings', hydrate: 'team', leagueId: '103,104'))
+        .to have_been_made
     end
 
     it 'allows requesting no hydration' do
@@ -33,20 +32,15 @@ RSpec.describe MLBStatsAPI::Schedules do
     it 'allows requesting multiple leagues' do
       client.standings(leagues: %i[big_east acc])
 
-      expect(
-        a_get_request('v1/standings', hydrate: 'team', leagueId: '107,108')
-      ).to have_been_made
+      expect(a_get_request('v1/standings', hydrate: 'team', leagueId: '107,108'))
+        .to have_been_made
     end
 
     it 'loads wildcard standings' do
       client.standings(standingsTypes: :wildCard, leagueId: 103)
 
-      expect(
-        a_get_request(
-          'v1/standings',
-          hydrate: 'team', leagueId: '103', standingsTypes: 'wildCard'
-        )
-      ).to have_been_made
+      expect(a_get_request('v1/standings', hydrate: 'team', leagueId: '103', standingsTypes: 'wildCard'))
+        .to have_been_made
     end
   end
 end
