@@ -9,26 +9,20 @@ Gem::Specification.new do |spec|
   spec.version = MLBStatsAPI::VERSION
   spec.authors = ['Steven Hoffman']
   spec.email = ['git@fustrate.com']
+  spec.required_ruby_version = '>= 3.2.0'
   spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.summary = %(MLB has a new Stats API!)
   spec.homepage = 'http://github.com/fustrate/mlb_stats_api'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1.0'
 
   spec.files = `git ls-files -z`.split("\x0").reject { _1.match(%r{^(test|spec|features)/}) }
   spec.bindir = 'exe'
-  spec.executables = spec.files.grep(%r{^exe/}) { File.basename(_1) }
+  spec.executables = []
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '> 2.3'
-  spec.add_development_dependency 'rake', '> 13.0'
-  spec.add_development_dependency 'rspec', '~> 3.11'
-  spec.add_development_dependency 'rubocop', '~> 1.37'
-  spec.add_development_dependency 'webmock', '~> 3.18'
-
   spec.add_dependency 'hana', '~> 1.3'
-  spec.add_dependency 'httparty', '~> 0.20'
-  spec.add_dependency 'moneta', '~> 1.5'
+  spec.add_dependency 'httparty', '~> 0.21'
+  spec.add_dependency 'moneta', '~> 1.6'
   spec.add_dependency 'zeitwerk', '~> 2.6'
 end

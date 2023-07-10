@@ -1,7 +1,7 @@
 AllCops:
+  TargetRubyVersion: 3.2
   EnabledByDefault: true
   NewCops: enable
-  SuggestExtensions: false
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Coding Style
