@@ -10,6 +10,6 @@ module MLBStatsAPI
 
     def [](key) = @data[key]
 
-    def dig(*path) = @data.dig(*path)
+    def dig(*) = @data.dig(*)
   end
 end

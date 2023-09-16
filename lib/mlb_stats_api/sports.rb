@@ -7,7 +7,7 @@ module MLBStatsAPI
     def sports = get('/sports')
 
     # View information for any given sport ID.
-    def sport(sport_id, **options) = get("/sports/#{sport_id}", **options)
+    def sport(sport_id, **) = get("/sports/#{sport_id}", **)
 
     # View information on all players for a given sport ID, optionally filtered by season.
     def sport_players(sport_id, season, **options) = get("/sports/#{sport_id}/players", **options.merge(season:))
