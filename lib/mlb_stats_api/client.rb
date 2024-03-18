@@ -45,7 +45,7 @@ module MLBStatsAPI
                  Moneta.new(:Null)
                end
 
-      @logger = logger.is_a?(::Logger) ? logger : ::Logger.new(logger)
+      @logger = logger.respond_to?(:log) ? logger : ::Logger.new(logger)
     end
 
     def get(endpoint, **query)
